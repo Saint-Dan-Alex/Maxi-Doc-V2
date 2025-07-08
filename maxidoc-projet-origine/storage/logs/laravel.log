@@ -726,3 +726,20 @@
 #54 {main}
 "} 
 [2025-07-07 11:01:45] local.ERROR: Debugbar exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'maxidoc.sessions' doesn't exist (SQL: select * from `sessions` where `id` = OMesJtfrtHKHHw4JO4xP7x8IMJyi3Kie0JjOVwFI limit 1)  
+[2025-07-08 11:07:51] local.ERROR: rename(C:\xampp\htdocs\Maxi-Doc-V2\maxidoc-projet-origine\bootstrap\cache\pacF3AD.tmp,C:\xampp\htdocs\Maxi-Doc-V2\maxidoc-projet-origine\bootstrap\cache\packages.php): Accès refusé (code: 5) {"exception":"[object] (ErrorException(code: 0): rename(C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\bootstrap\\cache\\pacF3AD.tmp,C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\bootstrap\\cache\\packages.php): Accès refusé (code: 5) at C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:219)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'rename(C:\\\\xampp...', 'C:\\\\xampp\\\\htdocs...', 219)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'rename(C:\\\\xampp...', 'C:\\\\xampp\\\\htdocs...', 219)
+#2 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(219): rename('C:\\\\xampp\\\\htdocs...', 'C:\\\\xampp\\\\htdocs...')
+#3 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(181): Illuminate\\Filesystem\\Filesystem->replace('C:\\\\xampp\\\\htdocs...', '<?php return ar...')
+#4 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(131): Illuminate\\Foundation\\PackageManifest->write(Array)
+#5 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(107): Illuminate\\Foundation\\PackageManifest->build()
+#6 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(90): Illuminate\\Foundation\\PackageManifest->getManifest()
+#7 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(79): Illuminate\\Foundation\\PackageManifest->config('aliases')
+#8 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#9 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(242): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(383): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(153): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 C:\\xampp\\htdocs\\Maxi-Doc-V2\\maxidoc-projet-origine\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
