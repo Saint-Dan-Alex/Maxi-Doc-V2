@@ -69,7 +69,7 @@ class CourrierController extends Controller
             return view('regidoc.pages.courriers.new-doc')->with([
                 'types' => $types,
                 'services' => $services,
-                // 'agents' => $agents,
+                'agents' => $agents,
                 'natures' => $natures,
                 'newDoc' => $newDoc,
                 'textSelected' => $textSelected,
@@ -80,7 +80,8 @@ class CourrierController extends Controller
             $types = CourrierType::select('id', 'titre')->get();
             $services = Service::select('id', 'titre','responsable_id')->get();
             $natures = CourrierNature::select('id', 'titre')->get();
-            return view('regidoc.pages.courriers.new-doc', compact('types', 'services', 'natures'));
+            $agents = collect(); // Initialize agents as an empty collection
+            return view('regidoc.pages.courriers.new-doc', compact('types', 'services', 'natures', 'agents'));
         }
 
     }
