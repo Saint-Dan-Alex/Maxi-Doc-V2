@@ -26,6 +26,7 @@ use App\Models\Brouillon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 // use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -907,13 +908,12 @@ class DocumentController extends Controller
         if (Storage::disk('public')->exists($tmpFilePath)) {
             try {
                 Storage::disk('public')->delete($tmpFilePath);
-                return redirect()->route('regidoc.home')->with('success', 'Document temporaire supprimé avec succès.');
             } catch (\Exception $e) {
-                return redirect()->route('regidoc.home')->with('error', 'Erreur lors de la suppression du document : ' . $e->getMessage());
+                // Log the error for debugging purposes
+                Log::error('Error deleting temporary file: ' . $e->getMessage());
             }
-        } else {
-            return redirect()->route('regidoc.home')->with('error', 'Le fichier n\'existe pas ou a déjà été supprimé.');
         }
+        return redirect()->route('document.creation');
     }
 
     public function moveCreatedDoc($filename, $pdfname)
