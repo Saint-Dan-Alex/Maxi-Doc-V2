@@ -1911,7 +1911,7 @@
             $('.assistant-trait').removeClass('d-none');
         });
     </script>
-
+    @endphp
 
 </body>
 
